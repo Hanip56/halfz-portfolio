@@ -1,4 +1,3 @@
-import { Footer } from "@/components";
 import { projectInfo } from "@/constants/info";
 import Head from "next/head";
 import Image from "next/image";
@@ -8,16 +7,16 @@ const DetailProject = ({ project }) => {
   return (
     <div className="w-[90vw] lg:w-[60rem] mx-auto mt-40 mb-20 min-h-[110vh]">
       <Head>
-        <title>{`${project.name}`} - Hanip Al Hapidz</title>
+        <title>{`${project.name} - Hanip Al Hapidz`}</title>
         <meta name="description" content={`Detailed ${project.name} project`} />
       </Head>
-      <h1 className="text-5xl text-white font-bold mb-8 text-center">
+      <h1 className="text-3xl md:text-5xl leading-3 text-white font-bold text-center">
         {project?.name}
       </h1>
-      <div className="my-8 space-y-8 max-w-[90%] lg:max-w-[70%] mx-auto">
+      <div className="my-6 md:my-8 space-y-6 md:space-y-8 max-w-[90%] lg:max-w-[70%] mx-auto">
         <div className="text-white flex">
           {/* <div className="flex-1">Web Development</div> */}
-          <div className="flex-1 text-center ">
+          <div className="flex-1 text-center text-sm md:text-base">
             Stack :{" "}
             {project?.stack?.map(
               (s, idx) =>
@@ -25,21 +24,21 @@ const DetailProject = ({ project }) => {
             )}
           </div>
         </div>
-        <p className="flex-1 text-gray-300 text-lg text-center ">
+        <p className="flex-1 text-gray-300 text-base md:text-lg text-center ">
           {project.moreDescription}
         </p>
       </div>
       <div className="flex text-white text-lg mx-auto justify-center gap-4">
         {project?.live && (
           <a href={project?.live} target="_blank" rel="noreferrer">
-            <button className="h-12 w-32 border border-white hover:bg-white/20">
+            <button className="h-8 w-24 text-sm md:text-base md:h-12 md:w-32 border border-white hover:bg-white/20">
               Visit Site
             </button>
           </a>
         )}
         {project?.code && (
           <a href={project?.code} target="_blank" rel="noreferrer">
-            <button className="h-12 w-32 border border-white hover:bg-white/20">
+            <button className="h-8 w-24 text-sm md:text-base md:h-12 md:w-32 border border-white hover:bg-white/20">
               Code
             </button>
           </a>

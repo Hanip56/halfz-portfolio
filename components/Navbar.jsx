@@ -3,10 +3,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import useOutsideAlerter from "../utils/clickOutside";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { HiBars3 } from "react-icons/hi2";
+import { HiX } from "react-icons/hi";
+import { CgFileDocument } from "react-icons/cg";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const barRef = useRef(null);
+  const menuRef = useRef(null);
   const router = useRouter();
   //   const navigate = useNavigate();
 
@@ -29,7 +32,7 @@ const Navbar = () => {
     handleNavigate(route, offset);
   };
 
-  useOutsideAlerter(barRef, setShowMenu);
+  useOutsideAlerter(menuRef, setShowMenu);
 
   return (
     <>
@@ -37,7 +40,7 @@ const Navbar = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
-        className="z-30 fixed w-screen h-16 top-0 bg-[#0d1828] py-6 px-6 md:px-14 flex justify-between text-gray-400 trackingWider"
+        className="z-30 fixed w-screen h-16 top-0 bg-[#0d1828] py-6 px-6 md:px-14 flex items-center justify-between text-gray-400 trackingWider"
       >
         <div
           className="w-7 h-7 cursor-pointer"
@@ -74,57 +77,40 @@ const Navbar = () => {
             Contacts
           </li>
         </ul>
-        <div></div>
-        <div className="relative w-6 h-6 block md:hidden cursor-pointer">
-          <svg
-            x="0px"
-            y="0px"
-            width="63.1px"
-            height="39.4px"
-            viewBox="0 0 63.1 39.4"
-            enableBackground="new 0 0 63.1 39.4"
-            onClick={() => setShowMenu((state) => !state)}
-            className="w-full h-full"
+        <div className="hidden md:block">
+          <a
+            href="/Hanip Al Hapidz - Resume.pdf"
+            aria-label="Open Hanip Al Hapidz's resume"
+            target="_blank"
+            rel="noreferrer"
           >
-            <line
-              fill="none"
-              stroke="#9ba2ae"
-              strokeWidth="5"
-              strokeMiterlimit="10"
-              x1="0"
-              y1="2.5"
-              x2="63.1"
-              y2="2.5"
-            />
-            <line
-              fill="none"
-              stroke="#9ba2ae"
-              strokeWidth="5"
-              strokeMiterlimit="10"
-              x1="0"
-              y1="19.7"
-              x2="63.1"
-              y2="19.7"
-            />
-            <line
-              fill="none"
-              stroke="#9ba2ae"
-              strokeWidth="5"
-              strokeMiterlimit="10"
-              x1="0"
-              y1="36.9"
-              x2="63.1"
-              y2="36.9"
-            />
-          </svg>
+            <button className="py-[.1rem] px-2 border-2 border-white/90 text-sm text-white/90 hover:bg-white/30 transition-[background]">
+              Resume
+            </button>
+          </a>
+        </div>
+        <div className="relative w-6 h-6 block md:hidden">
+          {showMenu === false ? (
+            <div
+              onClick={() => setShowMenu(true)}
+              className="absolute top-0 right-0 w-6 h-6 cursor-pointer z-20"
+            >
+              <HiBars3 className="w-full h-full" />
+            </div>
+          ) : (
+            <div className="absolute top-0 right-0 w-6 h-6 cursor-pointer z-20">
+              <HiX className="w-full h-full" />
+            </div>
+          )}
+
           <AnimatePresence>
             {showMenu && (
               <motion.div
-                ref={barRef}
+                ref={menuRef}
                 initial={{ opacity: 0, scale: 0, originX: 1, originY: -0.1 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0 }}
-                className="absolute w-40 h-40 z-[60] -bottom-[10.2rem] -left-[8.5rem] bg-[#0e334f] rounded-md"
+                className="absolute w-40 h-fit z-[60] -bottom-[13.5rem] -left-[8.5rem] bg-[#0e334f] rounded-md"
               >
                 <ul className="py-2">
                   <li
@@ -151,6 +137,21 @@ const Navbar = () => {
                   >
                     Contacts
                   </li>
+                  <div className="">
+                    <a
+                      href="/Hanip Al Hapidz - Resume.pdf"
+                      aria-label="Open Hanip Al Hapidz's resume"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <button className="navListMenu border-t border-t-white/40 text-start mt-4 w-full flex items-center gap-2">
+                        <span>Resume</span>
+                        <span>
+                          <CgFileDocument />
+                        </span>
+                      </button>
+                    </a>
+                  </div>
                 </ul>
               </motion.div>
             )}

@@ -53,7 +53,7 @@ const Contacts = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="relative h-full w-[90vw] md:w-[45rem] flex flex-col md:flex-row gap-x-12 gap-y-12 bg-black/20 -translate-x-[50%]"
+        className="relative h-full w-[90vw] md:w-[45rem] flex flex-col md:flex-row gap-x-12 gap-y-4 bg-black/20 -translate-x-[50%]"
       >
         <AnimatePresence>
           {message && (
@@ -76,7 +76,7 @@ const Contacts = () => {
           transition={{ delay: 0.6, duration: 1 }}
           className="basis-[5%] h-full space-y-6 pt-8"
         >
-          <h1 className="relative md:absolute md:-ml-16 text-4xl md:text-5xl text-txtWhite text-center md:text-end font-bold leading-[4rem]">
+          <h1 className="relative md:absolute md:-ml-16 text-4xl md:text-5xl text-txtWhite text-center md:text-end font-bold leading-[1rem]">
             <span className="text-4xl md:text-6xl">LETS </span>
             <span className="inline md:hidden">TALK</span>
             <br />

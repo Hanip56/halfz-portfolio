@@ -17,7 +17,7 @@ const Expertise = () => {
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true }}
-        className="mb-20"
+        className="mb-10 md:mb-20 mt-8 md:mt-0"
       >
         <h2 className="titleWhite">My Expertise</h2>
       </motion.div>
