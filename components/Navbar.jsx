@@ -123,7 +123,7 @@ const Navbar = () => {
                     className="navListMenu"
                     onClick={() => handleClose("Expertise", 70)}
                   >
-                    Skills
+                    Expertise
                   </li>
                   <li
                     className="navListMenu"
