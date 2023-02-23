@@ -1,0 +1,9 @@
+export { default as TitleReveal } from "./TitleReveal";
+export { default as Navbar } from "./Navbar";
+export { default as Hero } from "./Hero";
+export { default as About } from "./About";
+export { default as Expertise } from "./Expertise";
+export { default as ExpertiseCard } from "./ExpertiseCard";
+export { default as AlternateProjects } from "./AlternateProjects";
+export { default as Contacts } from "./Contacts";
+export { default as Footer } from "./Footer";
