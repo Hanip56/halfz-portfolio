@@ -8,10 +8,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        montserrat: ["Montserrat", "sans-serif"],
-        openSans: ["Open Sans", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
       },
       colors: {
+        white: "rgb(248 250 252)",
         bgBlue: "#0d1828",
         titleBlue: "#639dcf",
         txtWhite: "#fffefc",

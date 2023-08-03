@@ -40,7 +40,7 @@ const AlternateProjects = () => {
         />
       )}
 
-      <motion.div id="Projects" className="my-64">
+      <motion.div id="Projects">
         <motion.div
           variants={revealVariants}
           initial="offscreen"
@@ -113,7 +113,7 @@ const AlternateProjects = () => {
                     <h3 className="text-lg tracking-wide mt-1 text-gray-400">
                       {project.type}
                     </h3>
-                    <p className="text-md mt-3 text-gray-400">
+                    <p className="text-base mt-3 text-gray-400">
                       {project.description}
                     </p>
                     <button
@@ -121,7 +121,7 @@ const AlternateProjects = () => {
                       className={`text-white border border-gray-500 block py-2 px-4 hover:bg-white/20 mt-6 mr-auto`}
                       onClick={() => router.push(`/project/${project.slug}`)}
                     >
-                      View
+                      hehe
                     </button>
                   </div>
                 </motion.div>
@@ -166,10 +166,10 @@ const AlternateProjects = () => {
                   } text-white p-12 pt-0`}
                 >
                   <h2 className="text-4xl font-bold">{project.name}</h2>
-                  <h3 className="text-xl tracking-widest my-1 text-gray-500">
+                  <h3 className="text-lg tracking-widest my-1 text-slate-500">
                     {project.type}
                   </h3>
-                  <p className="text-lg mt-4 text-gray-400">
+                  <p className="text-base mt-3 text-gray-400">
                     {project.description}
                   </p>
                   <button
@@ -205,7 +205,7 @@ const AlternateProjects = () => {
         </motion.div>
 
         {/* graphic design section */}
-        <div className="mt-48">
+        {/* <div className="mt-48">
           <motion.h3
             variants={revealVariants}
             initial="offscreen"
@@ -238,7 +238,7 @@ const AlternateProjects = () => {
               </motion.div>
             ))}
           </div>
-        </div>
+        </div> */}
       </motion.div>
     </>
   );

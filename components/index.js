@@ -7,3 +7,4 @@ export { default as ExpertiseCard } from "./ExpertiseCard";
 export { default as AlternateProjects } from "./AlternateProjects";
 export { default as Contacts } from "./Contacts";
 export { default as Footer } from "./Footer";
+export { default as Skills } from "./Skills";

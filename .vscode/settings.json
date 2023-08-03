@@ -1,0 +1,30 @@
+{
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "challenge",
+      "database": "challenge",
+      "username": "root",
+      "password": "bombombakudan1"
+    },
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "kleeConnection",
+      "database": "sosmed",
+      "username": "klee",
+      "password": "bombombakudan1"
+    }
+  ]
+}

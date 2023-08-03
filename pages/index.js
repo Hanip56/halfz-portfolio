@@ -4,6 +4,7 @@ import {
   Contacts,
   Expertise,
   Hero,
+  Skills,
 } from "@/components";
 import Head from "next/head";
 
@@ -19,10 +20,11 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="max-w-[100vw] overflow-hidden">
+      <main className="max-w-[100vw] overflow-hidden space-y-64">
         <Hero />
         <About />
-        <Expertise />
+        {/* <Expertise /> */}
+        <Skills />
         <AlternateProjects />
         <Contacts />
       </main>

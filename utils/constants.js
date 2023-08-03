@@ -10,6 +10,7 @@ import {
   mongodbIcon,
   mongooseIcon,
   mysqlIcon,
+  tsIcon,
 } from "../assets/logo";
 
 export const arrBackEnd = [
@@ -47,6 +48,10 @@ export const arrFrontEnd = [
   {
     name: "javasript",
     icon: jsIcon,
+  },
+  {
+    name: "typescript",
+    icon: tsIcon,
   },
   {
     name: "react",

@@ -32,6 +32,15 @@ const Navbar = () => {
     handleNavigate(route, offset);
   };
 
+  const handleClickLogo = () => {
+    if (router.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "instant" });
+      return;
+    }
+
+    router.push("/");
+  };
+
   useOutsideAlerter(menuRef, setShowMenu);
 
   return (
@@ -42,10 +51,7 @@ const Navbar = () => {
         transition={{ duration: 1, delay: 1.5 }}
         className="z-30 fixed w-screen h-16 top-0 bg-[#0d1828] py-6 px-6 md:px-14 flex items-center justify-between text-gray-400 trackingWider"
       >
-        <div
-          className="w-7 h-7 cursor-pointer"
-          onClick={() => router.push("/")}
-        >
+        <div className="w-7 h-7 cursor-pointer" onClick={handleClickLogo}>
           <Image
             src="/self-logo.png"
             width={100}
@@ -58,11 +64,8 @@ const Navbar = () => {
           <li className="navList" onClick={() => handleNavigate("About", 28)}>
             About
           </li>
-          <li
-            className="navList"
-            onClick={() => handleNavigate("Expertise", 70)}
-          >
-            Expertise
+          <li className="navList" onClick={() => handleNavigate("Skills", 120)}>
+            Skills
           </li>
           <li
             className="navList"
@@ -112,47 +115,45 @@ const Navbar = () => {
                 exit={{ opacity: 0, scale: 0 }}
                 className="absolute w-40 h-fit z-[60] -bottom-[13.5rem] -left-[8.5rem] bg-[#0e334f] rounded-md"
               >
-                <ul className="py-2">
-                  <li
-                    className="navListMenu"
-                    onClick={() => handleClose("About", 28)}
+                <button
+                  className="navListMenu"
+                  onClick={() => handleClose("About", 28)}
+                >
+                  About
+                </button>
+                <button
+                  className="navListMenu"
+                  onClick={() => handleClose("Skills", 70)}
+                >
+                  Skills
+                </button>
+                <button
+                  className="navListMenu"
+                  onClick={() => handleClose("Projects", 120)}
+                >
+                  Projects
+                </button>
+                <button
+                  className="navListMenu"
+                  onClick={() => handleClose("Contacts", 100)}
+                >
+                  Contacts
+                </button>
+                <div className="">
+                  <a
+                    href="/Hanip Al Hapidz - Resume.pdf"
+                    aria-label="Open Hanip Al Hapidz's resume"
+                    target="_blank"
+                    rel="noreferrer"
                   >
-                    About
-                  </li>
-                  <li
-                    className="navListMenu"
-                    onClick={() => handleClose("Expertise", 70)}
-                  >
-                    Expertise
-                  </li>
-                  <li
-                    className="navListMenu"
-                    onClick={() => handleClose("Projects", 120)}
-                  >
-                    Projects
-                  </li>
-                  <li
-                    className="navListMenu"
-                    onClick={() => handleClose("Contacts", 100)}
-                  >
-                    Contacts
-                  </li>
-                  <div className="">
-                    <a
-                      href="/Hanip Al Hapidz - Resume.pdf"
-                      aria-label="Open Hanip Al Hapidz's resume"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <button className="navListMenu border-t border-t-white/40 text-start mt-4 w-full flex items-center gap-2">
-                        <span>Resume</span>
-                        <span>
-                          <CgFileDocument />
-                        </span>
-                      </button>
-                    </a>
-                  </div>
-                </ul>
+                    <button className="navListMenu border-t border-t-white/40 text-start mt-4 w-full flex items-center gap-2">
+                      <span>Resume</span>
+                      <span>
+                        <CgFileDocument />
+                      </span>
+                    </button>
+                  </a>
+                </div>
               </motion.div>
             )}
           </AnimatePresence>

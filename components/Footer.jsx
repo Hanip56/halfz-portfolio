@@ -10,7 +10,7 @@ const Footer = () => {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true }}
-      className="flex flex-col gap-y-3 w-full justify-center items-center"
+      className="mt-20 flex flex-col gap-y-3 w-full justify-center items-center"
     >
       <div className="flex gap-x-6">
         <a
@@ -36,7 +36,7 @@ const Footer = () => {
         </a>
       </div>
       <p className="text-gray-400 text-xs md:text-sm text-center mx-auto mb-4">
-        © 2022, Built and designed by Hanip Al Hapidz
+        © {new Date().getFullYear()}, Built and designed by Hanip Al Hapidz
       </p>
     </motion.div>
   );

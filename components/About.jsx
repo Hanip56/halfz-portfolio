@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section
       id="About"
-      className="h-screen mx-auto flex flex-col md:flex-row justify-center items-center gap-x-12"
+      className="mx-auto flex flex-col md:flex-row justify-center items-center gap-x-12"
     >
       <motion.div
         initial={{ marginRight: 150, opacity: 0 }}
@@ -32,7 +32,7 @@ const About = () => {
         viewport={{ once: true }}
         className="basis-[50%] text-justify md:text-start"
       >
-        <h2 className="titleBlue">About Me</h2>
+        <h2 className="titleBlue inline-block">About Me</h2>
         <p className="text-gray-400 max-w-xs text-sm md:text-base   sm:max-w-md md:max-w-xs  leading-6">
           Hi there! My name is Hanip Al Hapidz, I&apos;m a Front End Developer
           from bandung, Indonesia. <br />
@@ -44,12 +44,12 @@ const About = () => {
             libraries, and plugins into web applications to enhance
             functionality and performance.
           </span>
-          <br /> <br />{" "}
+          {/* <br /> <br />{" "}
           <span>
             Besides coding, I enjoy learn many technologies and make a lot of
             different thing, from graphic design, motion graphic, Web Design,
             And more.
-          </span>
+          </span> */}
         </p>
       </motion.div>
     </section>

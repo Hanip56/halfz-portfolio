@@ -46,7 +46,7 @@ const Contacts = () => {
   return (
     <section
       id="Contacts"
-      className="my-20 mt-28 flex flex-col items-center justify-center text-txtWhite"
+      className="flex flex-col items-center justify-center text-txtWhite"
     >
       <motion.div
         initial={{ opacity: 0, x: 100 }}

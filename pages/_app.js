@@ -19,9 +19,14 @@ export default function App({ Component, pageProps }) {
 
     const handleRouteChangeComplete = (url) => {
       const scrollPosition = sessionStorage.getItem(`scroll-${url}`);
+      console.log({ scrollPosition });
       if (scrollPosition) {
         const [x, y] = JSON.parse(scrollPosition);
         window.scrollTo(x, y);
+        window.scrollTo({
+          top: y,
+          behavior: "instant",
+        });
       } else {
         window.scrollTo(0, 0);
       }
