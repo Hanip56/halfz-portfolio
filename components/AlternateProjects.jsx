@@ -121,7 +121,7 @@ const AlternateProjects = () => {
                       className={`text-white border border-gray-500 block py-2 px-4 hover:bg-white/20 mt-6 mr-auto`}
                       onClick={() => router.push(`/project/${project.slug}`)}
                     >
-                      hehe
+                      View
                     </button>
                   </div>
                 </motion.div>
